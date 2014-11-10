@@ -25,13 +25,10 @@ public class Vector {
      * Gets value located at specified index
      * @param i index in vector
      * @return double located at index 'i' in vector
-     * @throws VectorIndexOutOfBoundsException when
-     * index is outside length of Vector.
      */
     public double get(int i) {
         if (i > length) {
-            throw new VectorIndexOutOfBoundsException("Point does not"
-                + "exist in Vector.");
+            //Vector Out of bounds, throws error
         }
         return vec[i];
     }

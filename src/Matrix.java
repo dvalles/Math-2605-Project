@@ -29,13 +29,10 @@ public class Matrix {
      * @param i row
      * @param j column
      * @return double located at row i and column j in matrix
-     * @throws MatrixIndexOutOfBoundsException when
-     * index is outside bounds of matrix.
      */
     public double get(int i, int j) {
         if (i > height || j > width) {
-            throw new MatrixIndexOutOfBoundsException("Point does not"
-                + " exist in Matrix.");
+            //Matrix out of bounds, throw error
         }
         return mat[i][j];
     }

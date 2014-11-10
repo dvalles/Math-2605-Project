@@ -17,17 +17,13 @@ public class LinearAlgebra {
      * @param m Matrix
      * @param v Vector
      * @return Vector calculated
-     * @throws IllegalOperandException when length of
      * Vector and width of Matrix don't match.
      */
-    public static Vector matrixVectorMultiply(Matrix m, Vector v)
-        throws IllegalOperandException {
+    public static Vector matrixVectorMultiply(Matrix m, Vector v) {
         int mHeight = m.getHeight();
         int mWidth = m.getWidth();
         if (v.getLength() != mWidth) {
-            throw new IllegalOperandException("Can't calculate dot product of"
-                + " a matrix of " + m.getWidth() + " width with a vector of"
-                + " length " + v.getLength());
+            //Error
         }
         double[] arr = new double[mHeight];
         for (int i = 0; i < mHeight; i++) {
@@ -45,8 +41,7 @@ public class LinearAlgebra {
      * @param m2 Matrix
      * @return Matrix calculated
      */
-    public static Matrix matrixAdd(Matrix m1, Matrix m2)
-        throws IllegalOperandException {
+    public static Matrix matrixAdd(Matrix m1, Matrix m2) {
         int m1Height = m1.getHeight();
         int m1Width = m1.getWidth();
         double[][] matrixArr = new double[m1Height][m1Width];
@@ -65,16 +60,12 @@ public class LinearAlgebra {
      * @param v1 Vector
      * @param v2 Vector
      * @return double calculated
-     * @throws IllegalOperandException when length of
      * vector 1 and vector 2 don't match
      */
-    public static double dotProduct(Vector v1, Vector v2)
-        throws IllegalOperandException {
+    public static double dotProduct(Vector v1, Vector v2) {
         if (v1.getLength() != v2.getLength()) {
-            throw new IllegalOperandException("Can't calculate dot product of"
-                + " a vector of length " + v1.getLength()
-                + " with a vector of "
-                + "length " + v2.getLength());
+            //Error
+            return 0.0;
         } else {
             double dp = 0.0;
             for (int i = 0; i < v1.getLength(); i++) {
@@ -90,8 +81,7 @@ public class LinearAlgebra {
      * @param v2 Vector
      * @return Vector calculated
      */
-    public static Vector vectorAdd(Vector v1, Vector v2)
-        throws IllegalOperandException {
+    public static Vector vectorAdd(Vector v1, Vector v2) {
         int v1Length = v1.getLength();
         double[] vecArr = new double[v1Length];
         for (int i = 0; i < v1Length; i++) {
