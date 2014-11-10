@@ -1,18 +1,12 @@
 /**
- * Immutable abstraction of Matrix.
- *
- * @author Michael Maurer
- * @version 1.2
+ * @author Ryan Brooks
+ * @version 1.0
  */
 public class Matrix {
 
-    /*
-    Create final instance variables
-    */
     private final double[][] mat;
     private final int height;
     private final int width;
-
 
     /**
      * Initialize instance variables

@@ -1,14 +1,9 @@
 /**
- * Immutable abstraction for Vector
- *
- * @author Michael Maurer
+ * @author Ryan Brooks
  * @version 1.2
  */
 public class Vector {
 
-    /*
-    Create final instance variables
-    */
     private final double[] vec;
     private final int length;
 
